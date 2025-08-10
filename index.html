@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Intent Launcher</title>
+<style>
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 24px; line-height: 1.4; }
+  h1 { font-size: 20px; margin-top: 0; }
+  .group { margin: 18px 0; }
+  a.btn {
+    display: block; text-decoration: none; padding: 14px 16px; margin: 8px 0;
+    border: 1px solid #aaa; border-radius: 10px; font-weight: 600;
+  }
+</style>
+</head>
+<body>
+  <h1>Intent Launcher (no-JS)</h1>
+  <p>Tap a button. If nothing happens, try a long-press → “Open link”.</p>
+
+  <div class="group">
+    <h2>Settings / Network</h2>
+    <a class="btn" href="intent://settings/#Intent;scheme=android-app;end">Open Settings</a>
+    <a class="btn" href="intent:#Intent;action=android.settings.SETTINGS;end">Open Settings (alt)</a>
+    <a class="btn" href="intent:#Intent;action=android.settings.WIFI_SETTINGS;end">Wi-Fi Settings</a>
+    <a class="btn" href="intent:#Intent;action=android.settings.AIRPLANE_MODE_SETTINGS;end">Airplane Mode Settings</a>
+    <a class="btn" href="intent:#Intent;action=android.settings.WIRELESS_SETTINGS;end">Wireless Settings</a>
+    <a class="btn" href="intent:#Intent;action=android.settings.MANAGE_APPLICATIONS_SETTINGS;end">Manage Apps</a>
+    <a class="btn" href="intent:#Intent;action=android.settings.MANAGE_UNKNOWN_APP_SOURCES;end">Install Unknown Apps</a>
+    <a class="btn" href="intent:#Intent;action=android.settings.ACCESSIBILITY_SETTINGS;end">Accessibility Settings</a>
+    <a class="btn" href="intent:#Intent;action=android.settings.APPLICATION_DETAILS_SETTINGS;data=package:com.android.providers.downloads;end">Download Manager App Info</a>
+  </div>
+
+  <div class="group">
+    <h2>Files / Picker</h2>
+    <a class="btn" href="intent://com.google.android.apps.nbu.files/#Intent;scheme=android-app;end">Open Files by Google (package)</a>
+    <a class="btn" href="intent:#Intent;action=android.intent.action.VIEW;component=com.android.documentsui/.files.FilesActivity;end">Open DocumentsUI (FilesActivity)</a>
+    <a class="btn" href="intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_FILES;end">Open Files app (category)</a>
+  </div>
+
+  <div class="group">
+    <h2>Play Store (may show an “Open” button)</h2>
+    <a class="btn" href="market://details?id=com.google.android.apps.nbu.files">Files by Google</a>
+    <a class="btn" href="market://details?id=com.android.chrome">Google Chrome</a>
+    <a class="btn" href="market://details?id=com.google.android.youtube">YouTube</a>
+  </div>
+
+  <p style="font-size:12px;color:#666">
+    Tip: if any Settings page opens, first try turning OFF Airplane Mode and connect Wi-Fi. Then go to
+    Apps → Special app access → Install unknown apps, and enable for your browser / Files.
+    If Files/DocumentsUI opens, plug in your USB and look for “USB Drive” on the left.
+  </p>
+</body>
+</html>
